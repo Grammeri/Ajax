@@ -1,11 +1,16 @@
+console.log(0)
 
+$.ajax('https://repetitora.net/api/JS/Images',{
+    success: function(data){
+        data.forEach(el =>{
+            const img = document.createElement("img");
+            img.src=el.thumbnail;
+            document.querySelector("body").appendChild(img);
+        })
+    }
+});
 
-var a = 5;
-
-$.ajax('https://repetitora.net/api/JS/Images');
-
-a=8;
-console.log(a);
+console.log(1);
 
 
 
