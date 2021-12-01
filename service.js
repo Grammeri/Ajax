@@ -19,12 +19,12 @@ function getTasks (){
     });
 }*/
 
-function createTask (title,){
+function createTask(title) {
     const promise = axios.post(`https://repetitora.net/api/JS/Tasks`, {
-        widget: 5345235,
+        widgetId: 5345235,
         title: title
-    })
-    return promise.then((response)=>{
+    });
+    return promise.then((response) => {
         return response.data;
     });
 }
